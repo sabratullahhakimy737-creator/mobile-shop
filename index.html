@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>بازارینو | بازار همه‌چیز</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="logo">ب</span><div><b>بازارینو</b><small>بازار همه‌چیز، برای همه</small></div></div>
+  <div class="search"><input id="search" placeholder="جستجوی محصول، موبایل، لباس، موتر..."><button onclick="searchProducts()">جستجو</button></div>
+  <div class="actions"><button class="ghost" onclick="openAuth()">ورود / عضویت</button><button class="sell" onclick="openSell()">＋ فروش محصول</button></div>
+</header>
+
+<section class="hero">
+  <div><span class="pill">بازار آنلاین افغانستان</span><h1>هر چیزی داری، <em>برای فروش بگذار.</em></h1>
+  <p>بازارینو یک بازار مدرن برای خرید و فروش مستقیم کالاها و خدمات است.</p>
+  <button class="heroBtn" onclick="openSell()">همین حالا محصول بفروش</button></div>
+  <div class="heroCard"><div class="heroIcon">🛍️</div><b>بازار برای همه</b><span>ثبت محصول با عکس، مشخصات، قیمت و راه ارتباطی</span></div>
+</section>
+
+<div class="stats"><div><b id="productCount">0</b><span>محصول</span></div><div><b>24/7</b><span>دسترسی</span></div><div><b>100%</b><span>ثبت آسان</span></div><div><b>افغانستان</b><span>بازار هدف</span></div></div>
+
+<main>
+<section class="sectionHead"><div><span>کشف کن</span><h2>دسته‌بندی‌ها</h2></div></section>
+<div class="cats">
+<button onclick="filterCat('موبایل')">📱 موبایل و تبلت</button><button onclick="filterCat('کمپیوتر')">💻 کمپیوتر</button>
+<button onclick="filterCat('موتر')">🚗 موتر</button><button onclick="filterCat('املاک')">🏠 املاک</button>
+<button onclick="filterCat('پوشاک')">👕 پوشاک</button><button onclick="filterCat('لوازم خانه')">🛋️ لوازم خانه</button>
+<button onclick="filterCat('خدمات')">🛠️ خدمات</button><button onclick="filterCat('سایر')">✨ سایر</button>
+</div>
+
+<section class="sectionHead productsHead"><div><span>تازه‌ترین آگهی‌ها</span><h2 id="listingTitle">همه محصولات</h2></div><button class="outline" onclick="renderProducts()">همه را ببین</button></section>
+<div id="products" class="grid"></div>
+<div id="empty" class="empty hidden">محصولی پیدا نشد.</div>
+</main>
+
+<div id="modal" class="modal hidden"><div class="modalBox"><button class="close" onclick="closeModal()">×</button><div id="modalContent"></div></div></div>
+<footer><div><b>بازارینو</b><p>بازار همه‌چیز برای خرید و فروش آسان.</p></div><div><b>راهنما</b><p>ثبت‌نام · فروش محصول · قوانین بازار</p></div><div><b>تماس</b><p>پشتیبانی بازارینو</p></div></footer>
+<script src="app.js"></script>
+</body></html>
